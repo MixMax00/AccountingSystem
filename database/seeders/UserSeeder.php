@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
             "role_id"  => Role::where('slug','superadmin')->first()->id,
             "name"     => "Super Admin",
             "email"    => "superadmin@gmail.com",
-            "password" => Hash::make("@Lbhsc$123#"),
+            "password" => Hash::make("12345678"),
         ]);
 
         User::updateOrCreate([
