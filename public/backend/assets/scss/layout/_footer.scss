@@ -1,0 +1,10 @@
+.footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+@media (max-width: 575.98px) {
+    .footer {
+        padding: 16px !important;
+    }
+}

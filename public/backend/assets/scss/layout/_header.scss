@@ -1,0 +1,36 @@
+header {
+    .sidebar-toggler {
+        background-color: var(--color-primary);
+        padding: 16px 16px 10px 16px;
+        // position: unset;
+        right: 24px;
+        top: 24px;
+        color: var(--color-white);
+        border-radius: var(--border-radius-4);
+        line-height: 1;
+
+        i {
+            color: var(--color-white);
+            &:before {
+                color: var(--color-white);
+            }
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: var(--color-tertiary) !important;
+            color: var(--color-white) !important;
+            border-color: var(--color-tertiary) !important;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    header {
+        .sidebar-toggler {
+            top: 16px;
+            right: 16px;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+
+body {
+    font-size: 1rem;
+}
+
+a {
+    color: var(--color-primary);
+    transition: var(--transition_all);
+
+    &:hover {
+        color: var(--color-tertiary);
+    }
+}
+
+// Notify text
+.text-danger {
+    color: var(--color-red) !important;
+}
+.text-success {
+    color: var(--color-success) !important;
+}
+.text-info {
+    color: var(--color-info) !important;
+}
+
+// sidebar
+.menu-header,
+.menu-title {
+    font-size: 1rem !important;
+}
+
+// Date Picker
+.datepicker-cell.focused:not(.selected),
+.datepicker-cell.selected,
+.datepicker-cell.selected:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+.datepicker-cell:not(.disabled):hover {
+    background-color: var(--color-tertiary);
+    color: var(--color-white);
+}
+
+/* Variables */
+@import 'helper/variables';
+
+/* Components */
+@import 'helper/components';
+
+/* Header */
+@import 'layout/header';
+
+// Page content
+@import 'pageContent';
+
+/* Footer */
+@import 'layout/footer';

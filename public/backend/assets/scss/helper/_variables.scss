@@ -1,0 +1,80 @@
+:root {
+    //Themes colors
+    --color-primary: #027cff;
+    --color-secondary: #5a49f8;
+    --color-tertiary: #ffa41b;
+    --color-white: #ffffff;
+    --color-white-smoke: #f5f5f5;
+    --color-alice-blue: #f0f8ff;
+    --color-black: #000000;
+    --color-black-light: #6c6c6e;
+    --color-dark: #222;
+    --bg-gradient: linear-gradient(90deg, #5a49f8 -19.26%, #027cff 75.05%);
+    --footer-sub: #adadad;
+
+    // Typo Color
+    --color-heading: #12096a;
+    --color-border: #ececec;
+
+    // Extra Color
+    --color-orange: #ff930e;
+    --color-malachite: #18dc59;
+    --color-blue: #5a49f8;
+    --color-picton-blue: #45b1e8;
+    --color-red: #ff3838;
+    --color-egg-blue: #01daba;
+
+    // Notify Colors
+    --color-success: #3eb75e;
+    --color-danger: #ff0003;
+    --color-warning: #ff8f3c;
+    --color-info: #1ba2db;
+
+    //Social icon colors
+    --color-facebook: #3b5997;
+    --color-twitter: #1ba1f2;
+    --color-youtube: #ed4141;
+    --color-linkedin: #0077b5;
+    --color-pinterest: #e60022;
+    --color-instagram: #c231a1;
+    --color-vimeo: #00adef;
+    --color-twitch: #6441a3;
+    --color-discord: #7289da;
+    --color-reddit: #ff4500;
+
+    //Border-radius
+    --border-radius-4: 4px;
+    --border-radius-8: 8px;
+    --border-radius-12: 12px;
+    --border-radius-16: 16px;
+    --border-radius-24: 24px;
+    --border-radius-28: 28px;
+    --border-radius-32: 32px;
+    --border-radius-48: 48px;
+    --border-radius-round: 50%;
+
+    //Font weight
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    --font-extra-bold: 800;
+    --font-black: 900;
+
+    //Shadows
+    --shadow-primary: 0px 8px 30px rgba(90, 73, 248, 0.04);
+    --shadow-white: 0px 2px 4px rgba(255, 255, 255, 0.125);
+    --shadow-lighter: 0 2px 4px 20px rgba(255, 255, 255, 0.1);
+    --shadow-sm: 0 0.125rem 0.25rem rgba(var(--bs-body-color-rgb), 0.075) !important;
+
+    //transition easing
+    --transition: 0.35s;
+    --transition-transform: transform 0.65s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition_all: all 0.3s ease;
+
+    //Font Family
+    --font-primary: 'Urbanist', sans-serif;
+    --font-secondary: 'Urbanist', sans-serif;
+    --font-awesome: 'Font Awesome 5 Pro';
+}

@@ -1,0 +1,98 @@
+// Pagination
+.pagination_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 36px;
+    padding: 0 12px;
+
+    .pagination {
+        .page-item {
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+
+            .page-link {
+                height: 48px;
+                color: var(--color-primary);
+                border-radius: var(--border-radius-4);
+                display: flex;
+                align-items: center;
+                border: none;
+
+                &:hover,
+                &:focus {
+                    background-color: var(--color-tertiary);
+                    color: var(--color-white);
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .active {
+            .page-link {
+                background-color: var(--color-tertiary);
+                color: var(--color-white) !important;
+            }
+        }
+
+        .disabled {
+            .page-link {
+                color: var(--footer-sub);
+            }
+        }
+    }
+}
+
+// Button
+.btnPrimary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transition: var(--transition_all);
+    font-weight: 500;
+    // min-width: 200px;
+    height: 48px;
+    &.btn-sm {
+        height: 38px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: var(--color-tertiary) !important;
+        color: var(--color-white) !important;
+        border-color: var(--color-tertiary) !important;
+    }
+}
+
+.btnDanger {
+    background-color: var(--color-red);
+}
+
+.btnGray {
+    background-color: var(--color-black-light);
+}
+
+// dropdown
+// dropdwon
+.dropdown {
+    .dropdown-menu {
+        border: none;
+        box-shadow: var(--shadow-sm);
+        .dropdown-item {
+            transition: var(--transition_all);
+            padding: 8px 16px;
+
+            &:hover {
+                background-color: var(--color-primary);
+                color: var(--color-white);
+            }
+        }
+    }
+}
+
+// @media (max-width: 575.98px) {
+//     .btnPrimary {
+//         width: 100%;
+//     }
+// }
