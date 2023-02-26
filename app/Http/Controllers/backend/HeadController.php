@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend;
 use App\Models\Heads;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class HeadController extends Controller
 {
@@ -75,17 +76,30 @@ class HeadController extends Controller
                 "payable"      => $request->applicable,
                 "details"      => $request->note,
             ]);
-
-
-
-
-
-
         }
 
 
-        return back();
+        Alert::success('Created', "Head created successfully!!!");
+        return redirect()->route('admin.head.list');
+    }
 
+    public function edit($id)
+    {
+        $edit = Heads::find($id);
+        return view('backend.heads.edit',[
+            "edit" => $edit,
+        ]);
+    }
 
+    public function update(Request $request)
+    {
+        Heads::where('id', $request->id)->update([
+            "head_name"    => $request->head_name,
+            "payable"      => $request->applicable,
+            "details"      => $request->note,
+        ]);
+
+        Alert::success('Created', "Head created successfully!!!");
+        return redirect()->route('admin.head.list');
     }
 }

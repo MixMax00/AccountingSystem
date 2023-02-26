@@ -96,7 +96,7 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="expense.html">
+                            <a href="{{ route('admin.budget.list') }}">
                                 <span class="menu-title">Budget</span>
                             </a>
                         </li>

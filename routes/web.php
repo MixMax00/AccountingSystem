@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\backend\BudgetController;
 use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\backend\GeneralSettingsController;
 use App\Http\Controllers\backend\HeadController;
@@ -36,7 +37,14 @@ Route::group(['middlware' => 'auth','prefix'=>'admin'], function(){
     Route::prefix('heads')->group(function(){
         Route::get('list', [HeadController::class, 'index'])->name('admin.head.list');
         Route::get('create', [HeadController::class, 'create'])->name('admin.head.create');
-        Route::post('create', [HeadController::class, 'store'])->name('admin.head.store');
+        Route::post('store', [HeadController::class, 'store'])->name('admin.head.store');
+        Route::get('edit/{id}', [HeadController::class, 'edit'])->name('admin.head.edit');
+        Route::post('update', [HeadController::class, 'update'])->name('admin.head.update');
+    });
+
+    Route::prefix('budget')->group(function(){
+        Route::get('list', [BudgetController::class, 'list'])->name('admin.budget.list');
+        Route::get('create', [BudgetController::class, 'create'])->name('admin.budget.create');
     });
 
     Route::group(["prefix"=> "generalSetting"],function(){

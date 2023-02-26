@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\SessionYear;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class SessionYearController extends Controller
 {
@@ -27,7 +28,7 @@ class SessionYearController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.sessionYear.create');
     }
 
     /**
@@ -38,7 +39,19 @@ class SessionYearController extends Controller
      */
     public function store(Request $request)
     {
+       //return $request->all();
 
+        SessionYear::create([
+            "year"          => $request->year,
+            "staring_month" => $request->staring_month,
+            "ending_month"  => $request->ending_month,
+            "note"          => $request->note,
+        ]);
+
+
+        Alert::success('Created', 'Year created successfully!!!');
+
+        return redirect()->route('sessionYear.index');
     }
 
     /**
@@ -72,7 +85,12 @@ class SessionYearController extends Controller
      */
     public function update(Request $request, SessionYear $sessionYear)
     {
-        //
+        SessionYear::create([
+            "year"          => $request->year,
+            "staring_month" => $request->staring_month,
+            "ending_month"  => $request->ending_month,
+            "note"          => $request->note,
+        ]);
     }
 
     /**

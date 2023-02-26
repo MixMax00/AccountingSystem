@@ -12,7 +12,7 @@
 <td>{{ $data->payable }}</td>
 <td>{{ $data->details }}</td>
 <td>
-    <a href="#" class="btn btn-info">Edit</a>
+    <a href="{{ route('admin.head.edit', ['id'=>$data->id]) }}" class="btn btn-info">Edit</a>
 </td>
 
 <x-heads :datas="$data->children"/>

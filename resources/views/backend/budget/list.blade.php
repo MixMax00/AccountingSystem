@@ -3,8 +3,8 @@
 @section('backend')
 <div class="pageContent">
     <div class="pageTitle shadow-sm d-flex justify-content-between">
-        <h3 class="title">Budget Year</h3>
-        <a href="{{ route('sessionYear.create') }}" class="btn btn-primary">Add Year</a>
+        <h3 class="title">Budget List</h3>
+        <a href="{{ route('admin.budget.create') }}" class="btn btn-primary">Add New Budget</a>
     </div>
 
     <!-- Form Wraper -->
@@ -20,10 +20,10 @@
                         <thead class="align-middle">
                             <tr>
                                 <th scope="col">SL</th>
-                                <th scope="col">Session Year</th>
-                                <th scope="col">Starting Month</th>
-                                <th scope="col">Ending Month</th>
-                                {{-- <th scope="col">Action</th> --}}
+                                <th scope="col">Budget Year</th>
+                                <th scope="col">Probability</th>
+                                <th scope="col">Source</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
 
@@ -31,12 +31,12 @@
                             @forelse ($datas as $data)
                             <tr>
                                 <td>{{ $loop->index +1 }}</td>
-                                <td>{{ $data->year }}</td>
-                                <td>{{ $data->staring_month }}</td>
-                                <td>{{ $data->ending_month }}</td>
-                                {{-- <td>
-                                    <a href="#" class="btn btn-info">Edit</a>
-                                </td> --}}
+                                <td>{{ $data->year->staring_month }} - {{ $data->year->ending_month }}</td>
+                                <td><span>$ </span>{{ $data->budget }}</td>
+                                <td>{{ $data->budget_lists->count() }}</td>
+                                <td>
+                                    <a href="#" class="btn btn-info">View</a>
+                                </td>
                             </tr>
                             @empty
 
